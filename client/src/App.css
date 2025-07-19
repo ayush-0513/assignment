@@ -1,0 +1,81 @@
+/* src/App.css */
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  box-sizing: border-box; /* Ensures padding doesn't add to element's total width/height */
+}
+
+.App {
+  width: 100%;
+  max-width: 1200px; /* Adjust this based on your preference for overall page width */
+  background-color: #fff; /* This background will now apply to the whole App container */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex; /* Make App a flex container itself for Title and content-container */
+  flex-direction: column; /* Stack Title and content-container vertically */
+  align-items: center; /* Center horizontally */
+}
+
+/* Flex container for the form and JSON preview */
+.content-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+  justify-content: center; /* Center items when they wrap or there's extra space */
+  align-items: flex-start; /* Align items to the top */
+  width: 100%; /* Ensure it takes full width of .App */
+  gap: 20px; /* Space between the two columns */
+}
+
+.form-card {
+  flex: 1 1 450px; /* flex-grow, flex-shrink, flex-basis */
+                   /* Allows it to grow, shrink, and has a preferred width of 450px */
+  min-width: 350px; /* Ensure it doesn't get too small */
+}
+
+/* Override default Ant Design Card margin for the form-card if needed, 
+   though flex gap handles spacing here */
+.ant-card.form-card {
+    margin-top: 0 !important; /* Remove card's top margin if any default applies */
+}
+
+.ant-card-head {
+    
+  
+    text-align: left; /* Default Ant Design card header might be centered */
+}
+
+/* Styling for the JSON Preview card to also be flexible */
+.ant-card[title="JSON Schema Preview"] {
+    
+    flex: 1 1 450px; /* Allows it to grow, shrink, and has a preferred width of 450px */
+    min-width: 350px; /* Ensure it doesn't get too small */
+    margin-top: 0 !important; /* Remove default top margin if any, flex gap handles spacing */
+}
+
+/* Ensure JSON Preview preformatted text fits */
+.ant-card[title="JSON Schema Preview"] pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-height: 500px; /* Optional: limit height and add scroll if content is too long */
+    overflow-y: auto;
+}
+
+
+/* Ant Design overrides for better spacing */
+/* Adjust these if you find inner elements still compressing too much */
+.ant-space-item {
+   /* Ensures items in space take full width */
+}
+
+/* You might need to adjust widths of Input and Select in FieldRow.tsx if 
+   they cause wrapping too early. Or remove fixed widths for more flexibility. */
+/* For example, in FieldRow.tsx:
+    <Input style={{ flex: 1, minWidth: 120 }} />
+    <Select style={{ flex: 0 0 auto, minWidth: 100 }} /> 
+*/
