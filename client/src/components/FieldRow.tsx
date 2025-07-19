@@ -50,9 +50,6 @@ const FieldRow: React.FC<FieldRowProps> = ({ index, remove, nestPath }) => {
             <Select 
             placeholder="Field type"
               {...field}
-              
-              // Debugging log can be placed outside JSX if needed
-              // Placeholder for when no option is selected
               style={{ width: 120 }}
               options={[
                 // { value: 'select field Type', label: 'select field Type' },
