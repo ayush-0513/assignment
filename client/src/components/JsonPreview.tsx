@@ -14,5 +14,5 @@ const JsonPreview: React.FC<JsonPreviewProps> = ({ schema }) => {
     </Card>
   );
 };
-
+// Interface 
 export default JsonPreview;
