@@ -5,5 +5,5 @@ export interface SchemaField {
   name: string;
   type: FieldType;
   children?: SchemaField[]; 
-  // For 'nested' type
+  
 }
