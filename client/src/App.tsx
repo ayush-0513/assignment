@@ -1,4 +1,3 @@
-// src/App.tsx
 
 import React from 'react';
 import { Button, Typography, Space, Card, ConfigProvider } from 'antd';
@@ -90,8 +89,8 @@ const App: React.FC = () => {
         </Title>
 
         {/* New flex container for side-by-side layout */}
-        <div className="content-container"> 
-          <Card className="form-card" style={{ width: '50%' }}> {/* Added a class for potential specific styling */}
+        <div className="content-container">
+          <Card className="form-card" style={{ width: '50%' }}>
             <FormProvider {...methods}>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <Space direction="vertical" style={{ width: '100%' }}>
@@ -122,7 +121,7 @@ const App: React.FC = () => {
             </FormProvider>
           </Card>
 
-          <JsonPreview schema={finalSchemaForPreview}  />
+          <JsonPreview schema={finalSchemaForPreview} />
         </div>
       </div>
     </ConfigProvider>
