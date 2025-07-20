@@ -65,16 +65,11 @@
   overflow-y: auto;
 }
 
-/* ADD THIS to the end of your App.css file */
+
 
 .form-card .ant-card-body {
-  /* This is the key: adds a horizontal scrollbar when content overflows */
+  
   overflow-x: auto;
-
-  /* This is still useful for when the form gets very long vertically */
   overflow-y: auto;
-
-  /* This adds some extra space at the bottom of the card's body
-     so the horizontal scrollbar doesn't awkwardly cover the last form item. */
   padding-bottom: 20px;
 }
